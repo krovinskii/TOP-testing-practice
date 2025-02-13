@@ -27,7 +27,7 @@ test("divide", () => {
   expect(calculator.divide(10, 2)).toBe(5);
 });
 test("multiply", () => {
-  expect(calculator.add(2, 3)).toBe(6);
+  expect(calculator.multiply(2, 3)).toBe(6);
 });
 // caesarCipher Tests
 
