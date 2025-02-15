@@ -54,3 +54,10 @@ test("caesarShift punctuation", () => {
   expect(caesarShift("Hello, World!", 3)).toEqual("Khoor, Zruog!");
 });
 // analyzeArray Tests
+import { analyzeArray } from "./tests";
+test("analyze", () => {
+  expect(analyzeArray.average([1, 8, 3, 4, 2, 6])).toBe(4);
+  expect(analyzeArray.min([1, 8, 3, 4, 2, 6])).toBe(1);
+  expect(analyzeArray.max([1, 8, 3, 4, 2, 6])).toBe(8);
+  expect(analyzeArray.length([1, 8, 3, 4, 2, 6])).toBe(6);
+});

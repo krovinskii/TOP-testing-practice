@@ -47,3 +47,34 @@ export const caesarShift = (str, shift) => {
     })
     .join("");
 };
+
+export const analyzeArray = {
+  average: function (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+    return sum / arr.length;
+  },
+  min: function (arr) {
+    let smaller = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i] < smaller) {
+        smaller = arr[i];
+      }
+    }
+    return smaller;
+  },
+  max: function (arr) {
+    let bigger = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+      if (arr[i] > bigger) {
+        bigger = arr[i];
+      }
+    }
+    return bigger;
+  },
+  length: function (arr) {
+    return arr.length;
+  },
+};
