@@ -32,17 +32,18 @@ test("multiply", () => {
 // caesarCipher Tests
 import { caesarShift } from "./tests";
 test("caesarShift 1char", () => {
-  expect(caesarShift("teacher", 1)).toEqual("UFBDIFS");
+  expect(caesarShift("teacher", 1)).toEqual("ufbdifs");
 });
 test("caesarShift 3char", () => {
-  expect(caesarShift("teacher", 3)).toEqual("WHDFKHU");
+  expect(caesarShift("teacher", 3)).toEqual("whdfkhu");
 });
 test("caesarShift 5char", () => {
-  expect(caesarShift("teacher"), 5).toEqual("YJFHMJW");
+  expect(caesarShift("teacher", 5)).toEqual("yjfhmjw");
 });
 test("caesarShift 10char", () => {
-  expect(caesarShift("teacher"), 10).toEqual("DOKMROB");
+  expect(caesarShift("teacher", 10)).toEqual("dokmrob");
 });
+
 test("caesarShift wrapping", () => {
   expect(caesarShift("xyz", 3)).toEqual("abc");
 });
@@ -52,4 +53,4 @@ test("caesarShift character sensitivity", () => {
 test("caesarShift punctuation", () => {
   expect(caesarShift("Hello, World!", 3)).toEqual("Khoor, Zruog!");
 });
-// analyzeArray TestsP
+// analyzeArray Tests

@@ -24,4 +24,26 @@ export const calculator = {
   divide: (a, b) => a / b,
   multiply: (a, b) => a * b,
 };
-export const caesarCipher = (str, shift) => {};
+export const caesarShift = (str, shift) => {
+  //(teacher, 10) => DOKMROB
+  //(xyz, 3) => abc
+  const strArray = str.split("");
+  const alphabetArray = "abcdefghijklmnopqrstuvwxyz".split("");
+  const alphabetLength = alphabetArray.length;
+
+  return strArray
+    .map((char) => {
+      const isUpperCase = char === char.toUpperCase();
+      const lowerChar = char.toLowerCase();
+      let index = alphabetArray.indexOf(lowerChar);
+
+      if (index === -1) return char;
+
+      let newIndex = (index + shift) % alphabetLength;
+      if (newIndex < 0) newIndex += alphabetLength;
+
+      let shiftedChar = alphabetArray[newIndex];
+      return isUpperCase ? shiftedChar.toUpperCase() : shiftedChar;
+    })
+    .join("");
+};
